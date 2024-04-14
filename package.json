@@ -1,0 +1,17 @@
+{
+  "name": "react_learning",
+  "version": "1.0.0",
+  "description": "This is learning react by Anjali Thawani",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Anjali Thawani",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
