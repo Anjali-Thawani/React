@@ -1,49 +1,45 @@
 Theory -
 ● What is Emmet?
-Emmet is tool that generate code structure for you in VS-Code.
+  Emmet is tool that generate code structure for you in VS-Code.
 
 ● Difference between a Library and Framework?
-Parameter Framework Library
-
-Control Flow Controls the overall flow Developer retains control over the flow
-of the application
-
-Extensiveness More comprehensive, Focuses on specific functionality
-providing a broad set or problem-solving
-of tools
-
-Flexibility More rigid with strict More flexible, allowing selective usage
-conventions and guidelines
-
-Architectural May enforce its own architectural Does not dictate the overall
-patterns application structure
+| Parameter         | Framework                            | Library                                  |
+|-------------------|--------------------------------------|----------------------------------------  |
+| Control Flow      | Controls the overall flow            | Developer retains control over the flow  |
+|                   | of the application                   |                                          |
+| Extensiveness     | More comprehensive, providing a broad| Focuses on specific functionality or     |
+|                   | set of tools                         | problem-solving                          |
+| Flexibility       | More rigid with strict conventions   | More flexible, allowing selective        |
+|                   | and guidelines                       | usage                                    |
+| Architectural     | May enforce its own architectural    | Does not dictate the overall             |
+|                   | patterns                             | application structure                    |
 
 ● What is CDN? Why do we use it?
-
-# CDN:- Content Delivery Network.
-
+   # CDN:- Content Delivery Network.
          it is a network of distributed servers that work together to deliver web content more efficiently to users. When a user requests content from a website, such as images, scripts, stylesheets, or videos, the CDN serves that content from the server that is geographically closest to the user, rather than from the website's origin server.
+   
+  We use CDNs to make websites load faster and more reliably.
+  as CDN is Scalability, Reliability, fast.
 
-We use CDNs to make websites load faster and more reliably.
-as CDN is Scalability, Reliability, fast.
 
 ● Why is React known as React?
+  
+  React is named as such because it revolves around the concept of "reactive" programming, where user interfaces react to changes in data automatically.
 
-React is named as such because it revolves around the concept of "reactive" programming, where user interfaces react to changes in data automatically.
-
-React enables this reactive behavior by using a virtual DOM (Document Object Model) and a component-based architecture. When data changes, React efficiently updates only the parts of the UI that need to change, rather than re-rendering the entire page.
+  React enables this reactive behavior by using a virtual DOM (Document Object Model) and a component-based architecture. When data changes, React efficiently updates only the parts of the UI that need to change, rather than re-rendering the entire page.
 
 ● What is crossorigin in script tag?
+  
+  The crossorigin attribute in a <script> tag is used to specify how the browser should handle requests for cross-origin resources . It is commonly used when loading scripts from a different domain than the one hosting the current webpage.
 
-The crossorigin attribute in a <script> tag is used to specify how the browser should handle requests for cross-origin resources . It is commonly used when loading scripts from a different domain than the one hosting the current webpage.
+  There are a few values that crossorigin can take:
+  
+  # Anonymous: This is the default value. It indicates that the script does not require any credentials to be fetched.
 
-There are a few values that crossorigin can take:
+  # Use Credentials: This value indicates that the script requires credentials (such as cookies or HTTP authentication) to be fetched.
 
-# Anonymous: This is the default value. It indicates that the script does not require any credentials to be fetched.
+  # When the crossorigin attribute is left blank in a <script></script> tag,means the script is treated as a regular cross-origin resource without any specific CORS handling instructions.
 
-# Use Credentials: This value indicates that the script requires credentials (such as cookies or HTTP authentication) to be fetched.
-
-# When the crossorigin attribute is left blank in a <script></script> tag,means the script is treated as a regular cross-origin resource without any specific CORS handling instructions.
 
 ● What is difference between React and ReactDOM
 
@@ -51,19 +47,19 @@ React and ReactDOM are both essential parts of the React ecosystem, but they ser
 
 # React:
 
-1️⃣ React is a JavaScript library for building user interfaces. It provides a component-based architecture where UIs are composed of reusable and encapsulated components.
+1️⃣  React is a JavaScript library for building user interfaces. It provides a component-based         architecture  where UIs are composed of reusable and encapsulated components.
 
-2️⃣ React allows developers to create interactive UIs efficiently by managing the state of components and efficiently updating the UI in response to changes in data.
+2️⃣  React allows developers to create interactive UIs efficiently by managing the state of components and efficiently updating the UI in response to changes in data.
 
-3️⃣ React provides features like virtual DOM reconciliation, JSX syntax for writing components, and lifecycle methods for managing component behavior.
+3️⃣  React provides features like virtual DOM reconciliation, JSX syntax for writing components, and lifecycle methods for managing component behavior.
 
 # ReactDOM:
 
-1️⃣ ReactDOM is a package that provides the integration between React and the DOM (Document Object Model). It contains methods for rendering React components into the DOM and interacting with the DOM elements.
+1️⃣  ReactDOM is a package that provides the integration between React and the DOM (Document Object Model). It contains methods for rendering React components into the DOM and interacting with the DOM elements.
 
-2️⃣ ReactDOM's ReactDOM.render() method is used to render React components into the specified DOM container.
+2️⃣  ReactDOM's ReactDOM.render() method is used to render React components into the specified DOM container.
 
-3️⃣ It also provides additional methods for working with DOM elements, such as ReactDOM.findDOMNode() for accessing the underlying DOM node of a React component.
+3️⃣  It also provides additional methods for working with DOM elements, such as ReactDOM.findDOMNode() for accessing the underlying DOM node of a React component.
 
 # In summary, React is the core library for building UI components and managing their behavior, while ReactDOM is responsible for rendering React components into the DOM and providing utilities for interacting with the DOM.
 
@@ -73,4 +69,5 @@ React and ReactDOM are both essential parts of the React ecosystem, but they ser
 
 # On the other hand, react.production.js is for production use. It's smaller and optimized for performance since it removes the debugging tools, making it faster to load on websites.
 
-● What is async and defer? - see my Youtube video
+
+● What is async and defer? - see my Youtube video []
