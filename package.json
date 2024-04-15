@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "This is learning react by Anjali Thawani",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel learning1.html",
+    "build": "parcel build learning1.html"
   },
   "keywords": [
     "react"
