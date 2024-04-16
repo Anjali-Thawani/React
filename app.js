@@ -8,10 +8,9 @@ const heading = (
   </div>
 )
 
-
 // React.createElement("h1", { id: "heading" }, "Hello React");
-
-console.log(heading)
+// did minor change
+// console.log(heading)
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 console.log(root, 'ttt')
