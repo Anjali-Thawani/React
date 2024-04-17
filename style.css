@@ -1,3 +1,50 @@
-#heading {
-  color: red;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  background-color: black;
+  width: 100%;
+  height: 100px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#firstName {
+  color: chartreuse;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+
+  margin-left: 40px;
+  display: block;
+}
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+
+  padding: 14px 16px;
+  display: block;
+}
+
+a:hover {
+  background-color: chartreuse;
+  color: black;
+  border-radius: 10px;
 }
