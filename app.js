@@ -1,26 +1,18 @@
-import React from "react";
+import React from 'react';
 import ReactDOM from "react-dom/client";
+import HeaderComponent from './Components/HeaderComponent'
+import FooterComponent from './Components/FooterComponent';
+import MainComponent from './Components/MainComponent';
 
-const LogoComponent = () => <h1><span id="firstName">Anjali</span> Tech</h1>
-
-const NavComponent = () => {
+const AppLayoutComponent = () => {
   return (
-    <div className="nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Career</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact Us</a></li>
+    <div className="app">
+      <HeaderComponent />
+      <MainComponent />
+      <FooterComponent />
     </div>
   )
 }
-const Header = () => {
-  return (
-    <div className="container">
-      <LogoComponent />
-      <NavComponent />
-    </div>
-  )
-};
-const root = ReactDOM.createRoot(document.getElementById("root"))
 
-root.render(<Header />)
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<AppLayoutComponent />)
