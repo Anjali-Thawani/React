@@ -1,6 +1,6 @@
 import RestaurantCardComponent from './RestaurantCardComponent';
 import SearchComponent from './SearchComponent';
-import { foodObject } from '../foodObject';
+import { foodObject } from '../../foodObject';
 
 const MainComponent = () => {
   return (
