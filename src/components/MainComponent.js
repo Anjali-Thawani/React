@@ -1,12 +1,12 @@
 import RestaurantCardComponent from './RestaurantCardComponent';
 import SearchComponent from './SearchComponent';
-import { foodObject } from '../../foodObject';
 
-const MainComponent = () => {
+const MainComponent = (props) => {
+  const { setFoodList } = props;
   return (
     <div className="main-container">
       <SearchComponent />
-      <div className="res-container">{foodObject.map(foodItem =>
+      <div className="res-container">{setFoodList.map(foodItem =>
         < RestaurantCardComponent
           key={foodItem.id}
           resData={foodItem}
@@ -14,14 +14,8 @@ const MainComponent = () => {
       )}
       </div>
 
-      <div className="res-container">{foodObject.map(foodItem =>
-        <RestaurantCardComponent
-          key={foodItem.id}
-          resData={foodItem}
-        />
-      )}
-      </div>
-    </div>
+
+    </div >
   )
 }
 

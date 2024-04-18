@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from "react-dom/client";
-import HeaderComponent from './Components/HeaderComponent'
-import FooterComponent from './Components/FooterComponent';
-import MainComponent from './Components/MainComponent';
-
+import HeaderComponent from './components/HeaderComponent'
+import FooterComponent from './components/FooterComponent';
+import MainComponent from './components/MainComponent';
+import { foodObject } from './utils/foodObject';
 const AppLayoutComponent = () => {
+  let [ListFoodItem, setListFoodItem] = useState(foodObject)
+
+  const filterData = () => {
+    const filterFoodList = ListFoodItem.filter(item => item.rating > 3);
+    setListFoodItem(filterFoodList)
+  }
+
   return (
     <div className="app">
-      <HeaderComponent />
-      <MainComponent />
+      <HeaderComponent applyFilter={filterData} />
+      <MainComponent setFoodList={ListFoodItem} />
       <FooterComponent />
     </div>
   )
