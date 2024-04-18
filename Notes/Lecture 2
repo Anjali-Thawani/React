@@ -1,2 +1,59 @@
-What is NPM?
+1️⃣ What is NPM?
+✅ NPM is a packet manager that is used to manage all the library and package, 
+   there is no full-form of it.NPM primarily used for managing dependencies in projects.
+
+2️⃣ What is Parcel-Webpack? why do we need it
+✅ Parcel is a fast, zero-configuration web application bundler. 
+   It simplifies the setup process by automatically analyzing your 
+   project's structure and handling tasks like bundling.
+
+   There are several features of webpack:-
+   - Zero config
+   - Dev server
+   - Hot reloading modulation [HMR]
+   - Reliable caching
+   - Uses Tree shaking Algorithm
+   - Minification
+   - Image optimization
+   - Code splitting
+   - Content hashing
+
+3️⃣ What is .parcel-cache file
+✅ The .parcel-cache directory is a folder created by the Parcel bundler to 
+   store temporary files that help speed up the build process of your web application.
+
+   -  By storing cached files, Parcel can quickly determine which parts of your 
+       project have changed 
   
+4️⃣ what is npx?
+✅ npx is a command that is use to execute the package.
+
+5️⃣ What is difference between dependencies and dev-dependencies
+✅  
+| Aspect            | Dependencies                           | DevDependencies                           |
+|-------------------|----------------------------------------|-------------------------------------------|
+| Purpose           | Required for application in production |  Needed for development tasks             |
+| Installation      | Installed by default                   | Not installed by default                  |
+| Usage             | Required for application runtime       | Used during development tasks             |
+| Examples          | Express, React, Lodash                 | Jest, Babel, ESLint                       |
+
+6️⃣ What is Tree Shaking?
+✅ 
+# Tree shaking is a technique used in modern JavaScript bundlers, such as Webpack and Rollup, to eliminate unused code from your final bundle. The term "tree shaking" comes from the concept of shaking a tree to remove  leaves while keeping the healthy ones.
+
+# Here's how tree shaking works:
+
+⭐ Static Analysis: The bundler analyzes the static import and export statements 
+                   in your JavaScript code during the bundling process.
+
+⭐ Module Level Optimization: Tree shaking operates at the level of individual modules. 
+                              If a module exports multiple functions, classes, or variables, 
+                              but only some of them are used in your application, only the 
+                              used parts will be included in the final bundle. 
+                              Unused exports and their dependencies are removed.
+
+7️⃣ What is HMR?
+✅ Hot Module Replacement (HMR) is a feature in modern JavaScript bundlers that 
+   automatically updates changes in your code without refreshing the entire web page.
+
+8️⃣
