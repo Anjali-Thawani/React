@@ -2,16 +2,20 @@ import RestaurantCardComponent from './RestaurantCardComponent';
 import SearchComponent from './SearchComponent';
 
 const MainComponent = (props) => {
-  const { setFoodList } = props;
+  const { setFoodList, applySearch } = props;
+
   return (
     <div className="main-container">
-      <SearchComponent />
-      <div className="res-container">{setFoodList.map(foodItem =>
-        < RestaurantCardComponent
-          key={foodItem.id}
-          resData={foodItem}
-        />
-      )}
+      <SearchComponent applySearchToComp={applySearch} />
+      <div className="res-container">{
+        setFoodList == "Not_Found" ?
+          <h1>Data Not Found </h1> :
+          setFoodList.map(foodItem =>
+            < RestaurantCardComponent
+              key={foodItem.id}
+              resData={foodItem}
+            />
+          )}
       </div>
 
 
