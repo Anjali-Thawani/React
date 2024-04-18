@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+
 const HeaderComponent = () => {
   return (
     <div className="header">
@@ -10,6 +13,13 @@ const HeaderComponent = () => {
           <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
+      <div className="user">
+        <button type="submit" className="user-button">
+          <FontAwesomeIcon icon={faUserCircle} size="2xl" />
+        </button>
+        <div className="label">Sign Up</div>
+      </div>
+
     </div>
   )
 }

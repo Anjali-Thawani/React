@@ -15,6 +15,7 @@
 
 .logo {
   height: 20%;
+  width: 35%;
 }
 
 .nav > ul {
@@ -26,18 +27,55 @@
   margin: 10px;
   display: block;
   font-size: 22px;
-  margin-left: -1%;
 }
 .nav > ul > li > a {
   text-decoration: none;
   color: #000000;
-  padding: 14px 16px;
+  padding: 14px 26px;
 }
 
 .nav > ul > li > a:hover {
   background-color: white;
+  border-radius: 15px;
 }
 
+.user {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.user-button {
+  background-color: #fec806;
+  color: black;
+  border: none;
+  width: 100px;
+  border-radius: 25px;
+  padding: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s;
+}
+.user-button:hover {
+  background-color: #fec806;
+  color: white;
+  border: none;
+  width: 100px;
+  border-radius: 25px;
+  padding: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s;
+}
+.label {
+  color: #000000;
+  font-size: 22px;
+}
+
+.label:hover {
+  color: #ffffff;
+  font-weight: bold;
+}
 .search-container {
   position: relative;
   display: flex;
@@ -80,10 +118,13 @@
   margin-right: 1%;
   overflow: hidden;
   width: 200px;
-  height: 300px;
   border: 4px solid #fec806;
   border-radius: 5px;
   background: linear-gradient(to bottom, #ffffff, #ecba04);
+}
+
+.res-card:hover {
+  border: 4px solid #ffb733;
 }
 
 .res-logo {
