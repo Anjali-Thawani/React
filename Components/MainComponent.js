@@ -7,7 +7,8 @@ const MainComponent = () => {
     <div className="main-container">
       <SearchComponent />
       <div className="res-container">{foodObject.map(foodItem =>
-        <RestaurantCardComponent
+        < RestaurantCardComponent
+          key={foodItem.id}
           resData={foodItem}
         />
       )}
@@ -15,6 +16,7 @@ const MainComponent = () => {
 
       <div className="res-container">{foodObject.map(foodItem =>
         <RestaurantCardComponent
+          key={foodItem.id}
           resData={foodItem}
         />
       )}
