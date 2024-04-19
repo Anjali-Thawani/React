@@ -1,11 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faFilter } from '@fortawesome/free-solid-svg-icons';
-import LOGO_URL from '../utils/constants';
-import { foodObject } from '../utils/foodObject';
+import { LOGO_URL } from '../utils/constants';
 import { useState } from 'react';
 
-
 const HeaderComponent = (props) => {
+  const [btn, setBtn] = useState("Login");
   const { applyFilter } = props;
   return (
     <div className="header">
@@ -19,16 +18,17 @@ const HeaderComponent = (props) => {
         </ul>
       </div>
       <div className="user">
-        <button type="submit" className="user-button">
+        <button type="submit" className="user-button" onClick={() => { btn == 'Login' ? setBtn("Logout") : setBtn("Login") }}>
           <FontAwesomeIcon icon={faUserCircle} size="2xl" />
+          <span>{btn}</span>
         </button>
         <button type="submit" className="user-button" onClick={applyFilter}>
           <FontAwesomeIcon icon={faFilter} size="2xl" />
         </button>
 
-      </div>
+      </div >
 
-    </div>
+    </div >
   )
 }
 
