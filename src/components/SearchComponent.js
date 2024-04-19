@@ -12,9 +12,7 @@ const SearchComponent = ({ applySearchToComp }) => {
   // Function to handle input change
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
-    if (isEmpty(event.target.value)) {
-      applySearchToComp(event.target.value)
-    }
+    applySearchToComp(event.target.value)
   };
 
   const SearchIt = () => {
