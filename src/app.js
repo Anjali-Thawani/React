@@ -1,23 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from "react-dom/client";
 import HeaderComponent from './components/HeaderComponent'
 import FooterComponent from './components/FooterComponent';
 import MainComponent from './components/MainComponent';
-import { foodObject } from './utils/foodObject';
+import { API_URL } from './utils/constants'
 import { isEmpty } from 'lodash'
+import Shimmer from './components/shimmer';
 const AppLayoutComponent = () => {
-  let [ListFoodItem, setListFoodItem] = useState(foodObject);
+  let [ListFoodItem, setListFoodItem] = useState([]);
   let [SearchFoodItem, setFoodItem] = useState([]);
 
+  useEffect(() => { apiCall() }, [])
+
+  const apiCall = async () => {
+    const data = await fetch(API_URL)
+    const json = await data.json();
+    const data2 = json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    setListFoodItem(data2);
+  }
+
   const filterData = () => {
-    const filterFoodList = ListFoodItem.filter(item => item.rating > 3);
+    const filterFoodList = ListFoodItem.filter(item => item.info.avgRating > 4.5);
     setListFoodItem(filterFoodList)
   }
 
   const searchData = (name) => {
     if (!isEmpty(name)) {
       const searchString = String(name).toLowerCase();
-      const filteredData = ListFoodItem.filter(item => String(item.resName).toLowerCase().includes(searchString));
+      const filteredData = ListFoodItem.filter(item => String(item.info.name).toLowerCase().includes(searchString));
       if (!isEmpty(filteredData)) setFoodItem(filteredData);
       else {
         setFoodItem("Not_Found");
@@ -31,15 +41,21 @@ const AppLayoutComponent = () => {
   return (
     <div className="app">
       <HeaderComponent applyFilter={filterData} />
-      <MainComponent
-        applySearch={searchData}
-        setFoodList={
-          (!isEmpty(SearchFoodItem)) ?
-            SearchFoodItem :
-            ListFoodItem
-        } />
-      <FooterComponent />
-    </div>
+      {isEmpty(ListFoodItem) ? (
+        <Shimmer />
+
+      ) : (
+        <>
+          <MainComponent
+            applySearch={searchData}
+            setFoodList={!isEmpty(SearchFoodItem) ? SearchFoodItem : ListFoodItem}
+          />
+          <FooterComponent />
+        </>
+      )
+      }
+
+    </div >
   )
 }
 

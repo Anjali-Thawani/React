@@ -3,7 +3,6 @@ import SearchComponent from './SearchComponent';
 
 const MainComponent = (props) => {
   const { setFoodList, applySearch } = props;
-
   return (
     <div className="main-container">
       <SearchComponent applySearchToComp={applySearch} />
@@ -12,7 +11,7 @@ const MainComponent = (props) => {
           <h1>Data Not Found </h1> :
           setFoodList.map(foodItem =>
             < RestaurantCardComponent
-              key={foodItem.id}
+              key={foodItem.info.id}
               resData={foodItem}
             />
           )}
