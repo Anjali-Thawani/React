@@ -131,3 +131,66 @@ Here's what you might find in a "dist" folder:
 
 # Added it in package.json files like:-
   last 2 Firefox versions, last 2 Chrome versions
+
+1️⃣4️⃣ Read About caret(^) and tilda(~)
+
+# ✅  Caret (^):
+▶️ The caret symbol allows npm to install a dependency up to the next major version.
+
+▶️ It is typically used when you're confident that newer minor or patch versions of the dependency won't introduce breaking changes.
+
+▶️ The format is ^x.y.z, where x is the major version, and y and z are the minor and patch versions respectively.
+
+▶️ For example, "express": "^4.17.1" means npm can install any version of Express from 4.17.1 up to,
+                but excluding, 5.0.0.
+
+▶️ When you run npm install, npm will install the latest minor or patch version within the specified major version range.
+
+# ✅ Tilde (~):
+▶️ The tilde symbol allows npm to install a dependency up to the next minor version,
+  but not the next major version. It's more restrictive than the caret.
+
+▶️ The format is ~x.y.z, where x, y, and z represent the major, minor, and patch versions respectively.
+For example, "lodash": "~4.17.21" means npm can install any version of Lodash from 4.17.21 up to, but excluding, 4.18.0.
+
+▶️ When you run npm install, npm will install the latest patch version within the specified major 
+  and minor version range.
+
+1️⃣5️⃣ Read about script types in HTML
+
+# In HTML, the <script></script> element is used to embed or reference JavaScript code within a web page. The type attribute is used to specify the scripting language being used. Here are the common script types:
+
+   1️⃣ JavaScript (Default):
+   
+            If the type attribute is not specified, or if its value is set to "text/javascript", the browser assumes that the script is written in JavaScript. 
+            
+            This is the default behavior.Example:
+
+            <script>
+                    // JavaScript code here
+            </script>
+
+   2️⃣ Module Scripts:
+
+            To indicate that a script is a JavaScript module, you use "module" as the value of the type attribute. 
+            
+            Module scripts allow you to use modern JavaScript features like import and export.
+            
+            Example:
+
+            <script type="module">
+                   import { myFunction } from './myModule.js';
+                   myFunction();
+            </script>
+
+   3️⃣ Inline JavaScript with text/javascript:
+   
+            You can explicitly specify "text/javascript" as the type attribute value for inline JavaScript. 
+            
+            While this is redundant in most cases (since it's the default behavior), it can be used for clarity or compatibility with older browsers.
+            
+            Example:
+
+            <script type="text/javascript">
+                    // JavaScript code here
+            </script>
