@@ -1,0 +1,25 @@
+# Laying The Foundation
+
+1️⃣ What is JSX?
+✅ JSX stands for JavaScript XML. It's a syntax extension for JavaScript, often used with React, a popular JavaScript library for building user interfaces. 
+
+JSX allows developers to write HTML-like code within JavaScript, which helps to describe what the UI should look like. 
+
+This code is then transformed into regular JavaScript code before being interpreted by the browser.
+
+const element = <h1>Hello, world!</h1>;
+
+In the above example, <h1>Hello, world!</h1> looks like HTML but is actually JSX. 
+
+It gets transformed into a React.createElement() function call, which creates a virtual DOM element representing the <h1> element.
+
+2️⃣ Superpower of JSX
+✅ Superpower of JSX are as follows:
+
+1️⃣ HTML in JavaScript: JSX lets you write HTML-like code directly within JavaScript files.
+2️⃣ Easy UI Creation: It simplifies building user interfaces by combining HTML structure with 
+   JavaScript logic.
+3️⃣ Component Integration: JSX integrates well with React's component-based architecture, 
+    making UI  development straightforward.
+4️⃣ Readability: The familiar HTML syntax in JSX improves code readability and comprehension.
+5️⃣ Efficiency: JSX enables efficient UI updates through React's virtual DOM, enhancing performance.
