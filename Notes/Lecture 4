@@ -1,0 +1,72 @@
+# Talk is Cheap! Show me the code!
+
+1️⃣ Is JSX mandatory for react
+✅ No, JSX is not mandatory for React development, but it's highly recommended. 
+   JSX is a syntax extension for JavaScript that allows you to write HTML-like code within 
+   your JavaScript files.
+
+2️⃣ Is ES6 mandatory for react?
+✅ ES6 (ECMAScript 2015) is not mandatory for React development, but it's highly recommended. 
+   
+   Many features of ES6, such as 
+    
+    arrow functions 
+    classes
+    template literals
+    destructuring assignment 
+    spread syntax 
+    
+    can greatly enhance your productivity and make your code more concise and readable.
+
+3️⃣ {TitleComponent} v/s {<TitleComponent />} v/s {<TitleComponent></TitleComponent>}
+✅ {TitleComponent}==> display the definition of this component.
+   {<TitleComponent />} ==> Calls the component.
+   {<TitleComponent></TitleComponent>} ==> Calls the actual Component.
+
+4️⃣ How can I write comment in JSX?
+✅ There are two ways to write comment in JSX:-
+   Single Line Comment => //
+   Multiline Comment =>  /* Something Write Here */
+
+5️⃣ What is <React.Fragment></React.Fragment>and <></>
+✅ 
+
+In React, whenever you want to render something on the screen, you need to use a render method 
+inside the component.
+
+The render method will only render a single root node inside it at a time.
+
+However, if you want to return multiple elements, the render method will require a 'div' tag and put the entire content or elements inside it. 
+
+This extra node to the DOM sometimes results in the wrong formatting of your HTML output and also not loved by the many developers.
+
+Therefore to resolve this problem <React.Fragment></React.Fragment> Comes into the picture
+
+<React.Fragment></React.Fragment> allow you to group a list of children without adding extra nodes to the DOM.
+
+It was introduced in 16.2 version.
+
+# The main reason to use Fragments tag is:
+
+➡️ It makes the execution of code faster as compared to the div tag.
+➡️ It takes less memory.
+
+6️⃣ What is Virtual DOM?
+✅ In React for every DOM Object there is Corresponding Virtual DOM.
+   
+   It is Like a light weight copy but it lack the real thing's power to directly change what's on screen
+
+   Manipulating DOM is slow but manipulating Virtual DOM is Fast.
+
+   # Think of the Virtual DOM as a blueprint of the actual DOM.
+
+   # Blueprint Creation:
+            When you write React code and create components, React builds a blueprint (Virtual DOM) of what the actual webpage (DOM) should look like.
+          
+   # Changes Checking: 
+            When something changes in your React app (like a user clicking a button or data updating), React doesn't immediately change the real webpage. Instead, it first checks what parts of the blueprint (Virtual DOM) need to change.
+          
+   # Efficient Updates: 
+            React figures out the smallest set of changes needed to update the real webpage (DOM). It then makes those changes, updating only what's necessary without touching parts of the page that haven't changed.
+
+# This process helps React make updates faster and more efficiently.
