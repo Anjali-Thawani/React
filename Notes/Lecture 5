@@ -1,0 +1,54 @@
+# Let's get Hooked!
+
+1️⃣ What is the difference between Named export, Default export and * as export?
+# ✅ In JavaScript, when exporting modules, you have different methods to export functionality from a  module:
+
+  # ▶️ Named exports: 
+        With named exports, you explicitly specify which variables, functions, or classes you want to export from a module. You can export multiple entities from a single module using named exports, and you import them by specifying their names when importing.
+        
+        Example:
+
+        // module.js
+            export const foo = 'foo';
+            export function bar() { /* function implementation */ }
+              
+        // Another file
+              import { foo, bar } from './module.js';
+
+  # ▶️ Default export: 
+        With default exports, you export only one entity as the default export from a module. 
+        
+        When importing, you can give it any name you want. Default exports are typically used when a module is exporting a single entity, such as a class or a function.
+        
+        Example:
+
+        // module.js
+            const foo = 'foo';
+            export default foo;
+
+        // Another file
+            import myFoo from './module.js';
+
+  # ▶️ * as export: 
+        The * as syntax is used to import all exports from a module as a single object. 
+        
+        This is useful when a module exports multiple things and you want to import them all under a single namespace.
+        
+        Example:
+
+        // module.js
+            export const foo = 'foo';
+            export function bar() { /* function implementation */ }
+          
+        // Another file
+            import * as myModule from './module.js';
+
+            // Now you can access the exports as properties of the myModule object
+            
+            console.log(myModule.foo);
+            myModule.bar();
+
+# In summary:-
+        Named exports allow you to export multiple entities from a module.
+        Default exports allow you to export a single entity from a module, which can be imported with any name.
+        * as export allows you to import all exports from a module as properties of a single object.
