@@ -70,3 +70,123 @@ It was introduced in 16.2 version.
             React figures out the smallest set of changes needed to update the real webpage (DOM). It then makes those changes, updating only what's necessary without touching parts of the page that haven't changed.
 
 # This process helps React make updates faster and more efficiently.
+
+7️⃣ What is Reconciliation in React?
+✅ In React, reconciliation is the process of updating the DOM to match the structure of the React components. When you render a React component, it creates a virtual representation of the DOM called the virtual DOM. When the state or props of a component change, React re-renders the component and compares the new virtual DOM with the previous one.
+
+During this comparison, React identifies the differences between the two virtual DOMs. It then calculates the most efficient way to update the real DOM to reflect these changes. Instead of re-rendering the entire DOM, React only updates the parts that have changed. This process of efficiently updating the real DOM based on the changes in the virtual DOM is what we refer to as reconciliation.
+
+Reconciliation is a key aspect of React's performance optimization. By minimizing the number of DOM updates, React ensures that the user interface remains responsive and efficient, even in complex applications with dynamic data and frequent user interactions.
+
+8️⃣ What is React Fibre?
+# ✅ The previous reconciliation algorithm, known as "Stack Reconciler" worked in a recursive manner, blocking the main thread during the update process. This sometimes led to performance issues, especially when dealing with complex applications with frequent updates. Fiber aims to solve these problems by introducing a more efficient reconciliation process.
+
+React Fiber is a complete rewrite of the React core algorithm, focusing on improving performance and responsiveness. Its main goal is to enable incremental rendering, allowing React to split the work of rendering into smaller chunks, and pause and resume the work as needed.
+
+# Key Features of React Fiber
+
+# 1️⃣ Incremental Rendering: 
+                  Fiber divides the rendering work into smaller units, enabling it to 
+                  yield control back to the browser whenever necessary, improving the application's responsiveness.
+
+# 2️⃣ Concurrency: 
+                  Fiber introduces the ability to work on multiple tasks concurrently, making it easier to prioritize updates and efficiently manage rendering.
+
+# 3️⃣ Error Boundaries: 
+                  Fiber introduces a new error-handling mechanism called Error Boundaries, which allows developers to catch errors in the component tree and display a fallback UI.
+
+# 4️⃣ Scheduling: 
+                  Fiber's scheduling mechanism helps to prioritize and manage updates more efficiently, ensuring that high-priority updates are processed before lower-priority ones.
+
+9️⃣ Why we need keys in react? When do we need keys in react
+✅ Keys in React are used to uniquely identify elements in a list or iterable. They are essential for React's reconciliation algorithm to efficiently update the DOM when the list changes. 
+
+# Here's why we need keys and when we need to use them:
+
+1️⃣ Uniqueness: 
+            Keys ensure that each element in a list has a unique identity. 
+            
+            React uses keys to differentiate between elements and track their changes efficiently.
+
+2️⃣ Optimized Reconciliation: 
+            When React re-renders a list, it compares the new list of elements with the previous one. 
+            
+            Keys help React identify which elements have been added, removed, or re-ordered, allowing it to update the DOM more efficiently without re-rendering the entire list.
+         
+3️⃣ Preserving State: 
+            Keys play a crucial role in preserving the state of components within a list. 
+            
+            Without keys, React may mistakenly re-order or re-render components incorrectly, leading to unexpected behavior or loss of component state.
+
+# When to Use Keys: Keys should be used whenever you render a list of elements in React using the map() function or similar methods. Each element in the list should have a unique and stable identifier that remains consistent across re-renders. Common sources for keys include unique IDs from a database, indexes, or unique attributes of the data being rendered.
+
+1️⃣0️⃣ Can we use index as a key in react?
+✅ Yes we can use index as a key but it is not good approach,  it can lead to issues in your application. 
+
+# Here are some reasons why you should avoid using the index as a key:
+
+   # ▶️ Stability: 
+         The index of an element can change if items are added, removed, or reordered in the list.
+         
+         Using the index as a key may result in unstable keys, leading to unexpected behavior or performance issues.
+
+   # ▶️ Dynamic Lists: 
+         If your list is dynamic and can change over time, using the index as a key may cause React to incorrectly identify elements and re-render them unnecessarily.
+
+   # ▶️ Component State: 
+         Using the index as a key can cause issues with preserving component state, especially if elements are added, removed, or reordered. 
+         
+         React may not be able to correctly associate state with the corresponding elements when the index-based keys change.
+
+   # ▶️ Reordering: 
+         If the order of elements in the list can change, using the index as a key may not accurately reflect the identity of the elements, leading to incorrect rendering or behavior.
+
+   # ▶️ Performance: 
+         Using index-based keys can impact the performance of your application, especially when dealing with large lists. 
+         
+         React may need to re-render more elements than necessary, leading to decreased performance.
+
+1️⃣1️⃣ What is props in react?
+# ✅ In React, "props" (short for properties) are a mechanism for passing data from a parent component to a child component. 
+
+Props are immutable, meaning they cannot be modified by the child component. 
+
+# Here's a breakdown of what props are and how they're used:
+
+   # ▶️ Data Flow: 
+         Props allow you to pass data from a parent component down to its child components.
+       
+         This enables you to create reusable and composable components by passing different data to the same component structure.
+
+   # ▶️ Immutable: 
+         Props are read-only and cannot be modified by the child component. 
+         
+         They are passed down from the parent component, and any changes to the data must be managed by the parent component.
+
+   # ▶️ Usage: 
+         Props are passed as attributes to React components when they are used in JSX. 
+  
+   # ▶️ Passing Functions: 
+
+         
+# For example:
+
+   function ParentComponent() {
+   return (
+      <ChildComponent name="John" age={90} />
+   );
+   }
+
+   function ChildComponent(props) {
+   return (
+      <div>
+         <p>Name: {props.name}</p>
+         <p>Age: {props.age}</p>
+      </div>
+   );
+   }
+
+1️⃣2️⃣ What is Config-driven UI?
+# ✅ In simple terms, a Config Driven UI is a way of building user interfaces where you describe how your UI should look and behave using a configuration file / API instead of writing code for each component. 
+
+# It's like setting preferences for your UI in a file, making it easier to customize and change without changing the code.
